@@ -10,7 +10,7 @@ namespace StarostinKD_ZIVT_251_OOP4
         private int count;          // Текущее количество элементов
         private int capacity;       // Максимальная вместимость
 
-        /// Конструктор - создает массив из списка студентов
+        // Конструктор - создает массив из списка студентов
         public ArrayWrapper(Student[] initialStudents)
         {
             capacity = initialStudents.Length;
@@ -23,7 +23,7 @@ namespace StarostinKD_ZIVT_251_OOP4
             }
         }
 
-        /// Индексатор - позволяет обращаться к элементам по индексу
+        // Индексатор - позволяет обращаться к элементам по индексу
         public Student this[int index]
         {
             get
@@ -42,7 +42,7 @@ namespace StarostinKD_ZIVT_251_OOP4
             }
         }
 
-        /// Добавление студента в массив
+        // Добавление студента в массив
         public bool Add(Student student)
         {
             if (count >= capacity)
@@ -56,7 +56,7 @@ namespace StarostinKD_ZIVT_251_OOP4
             return true;
         }
 
-        /// Увеличение размера массива
+        // Увеличение размера массива
         private void Resize()
         {
             capacity *= 2;
@@ -65,7 +65,7 @@ namespace StarostinKD_ZIVT_251_OOP4
             students = newArray;
         }
 
-        /// Удаление элемента по индексу
+        // Удаление элемента по индексу
         public bool RemoveAt(int index)
         {
             if (index < 0 || index >= count)
@@ -82,7 +82,7 @@ namespace StarostinKD_ZIVT_251_OOP4
             return true;
         }
 
-        /// Удаление элемента по значению
+        // Удаление элемента по значению
         public bool Remove(Student student)
         {
             int index = IndexOf(student);
@@ -92,7 +92,7 @@ namespace StarostinKD_ZIVT_251_OOP4
             return RemoveAt(index);
         }
 
-        /// Поиск индекса студента
+        // Поиск индекса студента
         public int IndexOf(Student student)
         {
             for (int i = 0; i < count; i++)
@@ -103,7 +103,7 @@ namespace StarostinKD_ZIVT_251_OOP4
             return -1;
         }
 
-        /// Вывод всех элементов
+        // Вывод всех элементов
         public void PrintAll(string title = "Массив студентов")
         {
             Console.WriteLine($"\n=== {title} ===");
@@ -120,6 +120,7 @@ namespace StarostinKD_ZIVT_251_OOP4
                 Console.WriteLine($"[{i}] {students[i].GetStudentInfo()}");
             }
         }
+        // Метод отчисления
         public void StartDeduction()
         {
             int countDeduction = 0;

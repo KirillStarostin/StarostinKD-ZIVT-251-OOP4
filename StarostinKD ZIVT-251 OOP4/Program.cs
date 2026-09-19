@@ -61,6 +61,7 @@ for (int i = 0; i < 100; i++)
 }
 Console.WriteLine("Студенты созданы.\n");
 
+// Отчисляем
 QueueDeduction queue1 = new QueueDeduction(students);
 queue1.StartDeduction();
 Console.WriteLine();
@@ -99,6 +100,7 @@ for (int i = 0; i < 100; i++)
 }
 Console.WriteLine("Студенты созданы.\n");
 
+// Отчисляем
 ArrayWrapper arraystudents = new ArrayWrapper(studentsArr);
 arraystudents.StartDeduction();
 Console.WriteLine();

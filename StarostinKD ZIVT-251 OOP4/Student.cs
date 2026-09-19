@@ -32,6 +32,7 @@ namespace StarostinKD_ZIVT_251_OOP4
         public static string[] Names = {"Кирилл", "Полина", "Арина", "Юлия", "Андрей", "Евгений", "Александр", "Екатерина", "Галина",
             "Михаил", "Ильяс", "Павел", "Дияз", "Дарья", "Сергей", "Андрей", "Даниил", "Вадим", "Валентина", "Максим"};
 
+        // Конструкторы
         public Student()
         {
             var Student = GenerateStudent();
@@ -49,6 +50,7 @@ namespace StarostinKD_ZIVT_251_OOP4
             Marks = marks;
         }
 
+        // Метод получения информации о студенте
         public string GetStudentInfo()
         {
             string info = $"Фамилия: {Surname}\nИмя: {Name}\nГруппа: {Group}\nОценки:\n";
@@ -59,6 +61,7 @@ namespace StarostinKD_ZIVT_251_OOP4
             return info;
         }
 
+        // Метод определения отчисления
         public bool GetDecision()
         {
             int Points = 0;
@@ -80,6 +83,7 @@ namespace StarostinKD_ZIVT_251_OOP4
 
         }
 
+        // Метод создания рандомного студента
         private static readonly Random random = new Random();
         public static Student GenerateStudent()
         {

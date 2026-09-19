@@ -10,6 +10,7 @@ namespace StarostinKD_ZIVT_251_OOP4
         private List<Student> ListStudents;
         private int CountStudents;
 
+        // Конструктор
         public QueueDeduction(List<Student> students)
         {
             DeductionQueue = new Queue<Student>();
@@ -22,6 +23,7 @@ namespace StarostinKD_ZIVT_251_OOP4
             }
         }
 
+        // Метод формирования списка на отчисление
         public List<Student> Selection()
         {
             for (int i = ListStudents.Count-1; i>=0; i--)
@@ -34,6 +36,7 @@ namespace StarostinKD_ZIVT_251_OOP4
             return ListStudents;
         }
 
+        // Метод отчисления
         public void StartDeduction()
         {
             while (DeductionQueue.Count > 0)
